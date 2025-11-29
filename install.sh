@@ -4,6 +4,14 @@ clear
 echo -e "\e[1;92m🔥 Installing CDR MAHID Termux Banner...\e[0m"
 sleep 1
 
+echo -e "\n\033[1;93m📦 Installing Required Packages...\033[0m"
+pkg update -y > /dev/null 2>&1
+pkg install -y figlet python ruby > /dev/null 2>&1
+gem install lolcat > /dev/null 2>&1
+
+echo -e "\e[1;92m✔ Packages Installed!\e[0m"
+sleep 1
+
 # ===== FILE PATHS =====
 BRC="$HOME/.bashrc"
 NAME_FILE="/data/data/com.termux/files/usr/etc/.termux_custom_name"
